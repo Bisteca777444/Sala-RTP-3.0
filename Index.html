@@ -29,26 +29,40 @@
       padding: 15px;
       box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
       color: #ddd;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      min-height: 160px;
     }
     .game h2 {
       color: #fff;
+      margin: 0 0 10px 0;
+      font-size: 1.3rem;
     }
     .game img {
-      width: 100%;
-      max-width: 300px;
+      max-width: 200px;
+      height: auto;
       border-radius: 8px;
-      margin-top: 10px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
+      flex-shrink: 0;
+      background: #222;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
     }
     .bar-container {
       height: 20px;
       border-radius: 10px;
       overflow: hidden;
       background-color: #444;
-      margin-top: 10px;
+      margin-top: auto;
       position: relative;
+      width: 100%;
+      max-width: 400px;
     }
     .bar {
       height: 100%;
@@ -81,7 +95,16 @@
     }
     @media screen and (max-width: 768px) {
       .game {
+        flex-direction: column;
         text-align: center;
+        min-height: auto;
+      }
+      .bar-container {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+      .info {
+        margin-top: 10px;
       }
     }
   </style>
@@ -91,42 +114,52 @@
   <h1>🎰 Sala de RTP - Slots PG</h1>
 
   <div class="game">
-    <h2>🐯 Fortune Tiger - RTP: 96.81%</h2>
     <img src="https://www.pgsoft.com/uploads/Games/Images/c4732483-f10f-4544-8a4d-38d900585fef.jpg" alt="Fortune Tiger" />
-    <div class="bar-container">
-      <div class="bar" style="--rtp-width: 96.81%;"></div>
+    <div class="info">
+      <h2>🐯 Fortune Tiger - RTP: 96.81%</h2>
+      <div class="bar-container">
+        <div class="bar" style="--rtp-width: 96.81%;"></div>
+      </div>
     </div>
   </div>
 
   <div class="game">
-    <h2>🐂 Fortune Ox - RTP: 96.75%</h2>
     <img src="https://www.worldhoopstats.com/wp-content/uploads/2023/11/fortune-ox.jpg" alt="Fortune Ox" />
-    <div class="bar-container">
-      <div class="bar" style="--rtp-width: 96.75%;"></div>
+    <div class="info">
+      <h2>🐂 Fortune Ox - RTP: 96.75%</h2>
+      <div class="bar-container">
+        <div class="bar" style="--rtp-width: 96.75%;"></div>
+      </div>
     </div>
   </div>
 
   <div class="game">
-    <h2>🐭 Fortune Mouse - RTP: 96.96%</h2>
     <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-mouse.jpg" alt="Fortune Mouse" />
-    <div class="bar-container">
-      <div class="bar" style="--rtp-width: 96.96%;"></div>
+    <div class="info">
+      <h2>🐭 Fortune Mouse - RTP: 96.96%</h2>
+      <div class="bar-container">
+        <div class="bar" style="--rtp-width: 96.96%;"></div>
+      </div>
     </div>
   </div>
 
   <div class="game">
-    <h2>🐰 Fortune Rabbit - RTP: 96.75%</h2>
     <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-rabbit.jpg" alt="Fortune Rabbit" />
-    <div class="bar-container">
-      <div class="bar" style="--rtp-width: 96.75%;"></div>
+    <div class="info">
+      <h2>🐰 Fortune Rabbit - RTP: 96.75%</h2>
+      <div class="bar-container">
+        <div class="bar" style="--rtp-width: 96.75%;"></div>
+      </div>
     </div>
   </div>
 
   <div class="game">
-    <h2>🐉 Fortune Dragon - RTP: 96.53%</h2>
     <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-dragon.jpg" alt="Fortune Dragon" />
-    <div class="bar-container">
-      <div class="bar" style="--rtp-width: 96.53%;"></div>
+    <div class="info">
+      <h2>🐉 Fortune Dragon - RTP: 96.53%</h2>
+      <div class="bar-container">
+        <div class="bar" style="--rtp-width: 96.53%;"></div>
+      </div>
     </div>
   </div>
 
