@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sala de RTP - 3.0</title>
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background: #f4f4f4;
+      background: #000;
+      color: #eee;
+    }
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+      letter-spacing: 1.2px;
     }
     .game {
-      background: white;
+      background: #121212;
       margin-bottom: 20px;
       border-radius: 8px;
       padding: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+      color: #ddd;
+    }
+    .game h2 {
+      color: #fff;
     }
     .game img {
       width: 100%;
       max-width: 300px;
       border-radius: 8px;
+      margin-top: 10px;
     }
     .bar-container {
       height: 20px;
       border-radius: 10px;
       overflow: hidden;
-      background-color: #ccc;
+      background-color: #444;
       margin-top: 10px;
+      position: relative;
     }
     .bar {
       height: 100%;
-      transition: width 0.3s ease-in-out;
+      width: 0; /* inicia zero para animação */
+      background: linear-gradient(90deg, #a8e063, #56ab2f);
+      border-radius: 10px 0 0 10px;
+      position: relative;
+      overflow: hidden;
+      animation: fillBar 2s forwards ease-out;
+      /* recebe valor da variável CSS --rtp-width para animar até essa largura */
+      width: var(--rtp-width);
+    }
+    /* brilho animado */
+    .bar::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -40%;
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.3) 100%);
+      transform: skewX(-20deg);
+      animation: shine 2s infinite;
+    }
+    @keyframes fillBar {
+      from { width: 0; }
+      to { width: var(--rtp-width); }
+    }
+    @keyframes shine {
+      from { left: -40%; }
+      to { left: 100%; }
     }
     @media screen and (max-width: 768px) {
       .game {
@@ -47,41 +92,41 @@
 
   <div class="game">
     <h2>🐯 Fortune Tiger - RTP: 96.81%</h2>
-    <img src="https://www.pgsoft.com/uploads/Games/Images/c4732483-f10f-4544-8a4d-38d900585fef.jpg">
+    <img src="https://www.pgsoft.com/uploads/Games/Images/c4732483-f10f-4544-8a4d-38d900585fef.jpg" />
     <div class="bar-container">
-      <div class="bar" style="width: 96.81%; background-color: hsl(120, 100%, 40%)"></div>
+      <div class="bar" style="--rtp-width: 96.81%;"></div>
     </div>
   </div>
 
   <div class="game">
     <h2>🐂 Fortune Ox - RTP: 96.75%</h2>
-    <img src="https://www.worldhoopstats.com/wp-content/uploads/2023/11/fortune-ox.jpg"
+    <img src="https://www.worldhoopstats.com/wp-content/uploads/2023/11/fortune-ox.jpg" />
     <div class="bar-container">
-      <div class="bar" style="width: 96.75%; background-color: hsl(120, 100%, 38%)"></div>
+      <div class="bar" style="--rtp-width: 96.75%;"></div>
     </div>
   </div>
 
   <div class="game">
     <h2>🐭 Fortune Mouse - RTP: 96.96%</h2>
-    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-mouse.jpg"
+    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-mouse.jpg" />
     <div class="bar-container">
-      <div class="bar" style="width: 96.96%; background-color: hsl(120, 100%, 45%)"></div>
+      <div class="bar" style="--rtp-width: 96.96%;"></div>
     </div>
   </div>
 
   <div class="game">
     <h2>🐰 Fortune Rabbit - RTP: 96.75%</h2>
-    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-rabbit.jpg"
+    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-rabbit.jpg" />
     <div class="bar-container">
-      <div class="bar" style="width: 96.75%; background-color: hsl(120, 100%, 38%)"></div>
+      <div class="bar" style="--rtp-width: 96.75%;"></div>
     </div>
   </div>
 
   <div class="game">
     <h2>🐉 Fortune Dragon - RTP: 96.53%</h2>
-    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-dragon.jpg"
+    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-dragon.jpg" />
     <div class="bar-container">
-      <div class="bar" style="width: 96.53%; background-color: hsl(120, 100%, 35%)"></div>
+      <div class="bar" style="--rtp-width: 96.53%;"></div>
     </div>
   </div>
 
