@@ -1,0 +1,7 @@
+.bar {
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+.bar[data-rtp] {
+  background-color: hsl(calc(var(--rtp) * 1.2), 100%, 40%);
+}
