@@ -26,85 +26,40 @@
       background: #121212;
       margin-bottom: 20px;
       border-radius: 8px;
-      padding: 15px;
+      padding: 20px;
       box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
       color: #ddd;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      min-height: 160px;
     }
     .game h2 {
-      color: #fff;
       margin: 0 0 10px 0;
       font-size: 1.3rem;
-    }
-    .game img {
-      max-width: 200px;
-      height: auto;
-      border-radius: 8px;
-      flex-shrink: 0;
-      background: #222;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-    .info {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
+      color: #fff;
     }
     .bar-container {
-      height: 20px;
-      border-radius: 10px;
-      overflow: hidden;
-      background-color: #444;
-      margin-top: auto;
       position: relative;
-      width: 100%;
-      max-width: 400px;
+      height: 25px;
+      border-radius: 12px;
+      background-color: #444;
+      overflow: hidden;
     }
     .bar {
       height: 100%;
-      width: 0;
+      border-radius: 12px 0 0 12px;
       background: linear-gradient(90deg, #a8e063, #56ab2f);
-      border-radius: 10px 0 0 10px;
-      position: relative;
-      overflow: hidden;
-      animation: fillBar 2s forwards ease-out;
-      width: var(--rtp-width);
+      width: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      transition: width 1.5s ease-in-out;
+      white-space: nowrap;
     }
-    .bar::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -40%;
-      width: 40%;
-      height: 100%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.3) 100%);
-      transform: skewX(-20deg);
-      animation: shine 2s infinite;
-    }
-    @keyframes fillBar {
-      from { width: 0; }
-      to { width: var(--rtp-width); }
-    }
-    @keyframes shine {
-      from { left: -40%; }
-      to { left: 100%; }
-    }
-    @media screen and (max-width: 768px) {
-      .game {
-        flex-direction: column;
-        text-align: center;
-        min-height: auto;
-      }
-      .bar-container {
-        max-width: 100%;
-        margin-top: 20px;
-      }
-      .info {
-        margin-top: 10px;
+    /* Barra preenche animada via JS */
+    @media (prefers-reduced-motion: reduce) {
+      .bar {
+        transition: none;
       }
     }
   </style>
@@ -114,52 +69,37 @@
   <h1>🎰 Sala de RTP - Slots PG</h1>
 
   <div class="game">
-    <img src="https://slotcatalog.com/userfiles/image/games/PG-Soft/23512/Fortune-Tiger-PG-Soft-6883890_s.jpg" />
-    <div class="info">
-      <h2>🐯 Fortune Tiger - RTP: 96.81%</h2>
-      <div class="bar-container">
-        <div class="bar" style="--rtp-width: 96.81%;"></div>
-      </div>
+    <h2>🐯 Fortune Tiger</h2>
+    <div class="bar-container">
+      <div class="bar" style="width: 96.81%;">96.81%</div>
     </div>
   </div>
 
   <div class="game">
-    <img src="https://slotcatalog.com/userfiles/image/games/PG-Soft/19443/Fortune-Ox-5634028_s.jpg" />
-    <div class="info">
-      <h2>🐂 Fortune Ox - RTP: 96.75%</h2>
-      <div class="bar-container">
-        <div class="bar" style="--rtp-width: 96.75%;"></div>
-      </div>
+    <h2>🐂 Fortune Ox</h2>
+    <div class="bar-container">
+      <div class="bar" style="width: 96.75%;">96.75%</div>
     </div>
   </div>
 
   <div class="game">
-    <img src="https://slotcatalog.com/userfiles/image/games/PG-Soft/15754/Fortune-Mouse-2_s.jpg" />
-    <div class="info">
-      <h2>🐭 Fortune Mouse - RTP: 96.96%</h2>
-      <div class="bar-container">
-        <div class="bar" style="--rtp-width: 96.96%;"></div>
-      </div>
+    <h2>🐭 Fortune Mouse</h2>
+    <div class="bar-container">
+      <div class="bar" style="width: 96.96%;">96.96%</div>
     </div>
   </div>
 
   <div class="game">
-    <img src="https://slotcatalog.com/userfiles/image/games/PG-Soft/28970/Fortune-Rabbit-6959451_s.png" />
-    <div class="info">
-      <h2>🐰 Fortune Rabbit - RTP: 96.75%</h2>
-      <div class="bar-container">
-        <div class="bar" style="--rtp-width: 96.75%;"></div>
-      </div>
+    <h2>🐰 Fortune Rabbit</h2>
+    <div class="bar-container">
+      <div class="bar" style="width: 96.75%;">96.75%</div>
     </div>
   </div>
 
   <div class="game">
-    <img src="https://slotcatalog.com/userfiles/image/games/PG-Soft/35240/Fortune-Dragon-PG-Soft-7027932_s.jpg" />
-    <div class="info">
-      <h2>🐉 Fortune Dragon - RTP: 96.53%</h2>
-      <div class="bar-container">
-        <div class="bar" style="--rtp-width: 96.53%;"></div>
-      </div>
+    <h2>🐉 Fortune Dragon</h2>
+    <div class="bar-container">
+      <div class="bar" style="width: 96.53%;">96.53%</div>
     </div>
   </div>
 
