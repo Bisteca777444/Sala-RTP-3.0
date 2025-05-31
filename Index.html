@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sala de RTP - 3.0</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sala de RTP - 3.0 com Música</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
       background: #f4f4f4;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background-color: #218838;
     }
     .game {
       background: white;
@@ -22,6 +34,8 @@
       width: 100%;
       max-width: 300px;
       border-radius: 8px;
+      display: block;
+      margin: 0 auto;
     }
     .bar-container {
       height: 20px;
@@ -45,9 +59,18 @@
 
   <h1>🎰 Sala de RTP - Slots PG</h1>
 
+  <!-- Botão para tocar a música -->
+  <button onclick="document.getElementById('bg-music').play()">▶️ Tocar Música</button>
+
+  <!-- Player de música invisível -->
+  <audio id="bg-music" loop>
+    <source src="assets/happy-nation.mp3" type="audio/mpeg" />
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
   <div class="game">
     <h2>🐯 Fortune Tiger - RTP: 96.81%</h2>
-    <img src="https://www.pgsoft.com/uploads/Games/Images/c4732483-f10f-4544-8a4d-38d900585fef.jpg">
+    <img src="https://www.pgsoft.com/uploads/Games/Images/c4732483-f10f-4544-8a4d-38d900585fef.jpg" alt="Fortune Tiger">
     <div class="bar-container">
       <div class="bar" style="width: 96.81%; background-color: hsl(120, 100%, 40%)"></div>
     </div>
@@ -55,7 +78,7 @@
 
   <div class="game">
     <h2>🐂 Fortune Ox - RTP: 96.75%</h2>
-    <img src="https://www.pgsoft.com/uploads/Games/Images/6bd4a24d-4557-49a5-916f-6c35ca889a47.jpg">
+    <img src="https://www.worldhoopstats.com/wp-content/uploads/2023/11/fortune-ox.jpg" alt="Fortune Ox">
     <div class="bar-container">
       <div class="bar" style="width: 96.75%; background-color: hsl(120, 100%, 38%)"></div>
     </div>
@@ -63,7 +86,7 @@
 
   <div class="game">
     <h2>🐭 Fortune Mouse - RTP: 96.96%</h2>
-    <img src="https://www.pgsoft.com/uploads/Games/Images/52474a4f-42bb-4b92-9325-4c8ce564721e.jpg">
+    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-mouse.jpg" alt="Fortune Mouse">
     <div class="bar-container">
       <div class="bar" style="width: 96.96%; background-color: hsl(120, 100%, 45%)"></div>
     </div>
@@ -71,7 +94,7 @@
 
   <div class="game">
     <h2>🐰 Fortune Rabbit - RTP: 96.75%</h2>
-    <img src="https://www.pgsoft.com/uploads/Games/Images/71e29ba0-e61f-4c44-be7d-915fe6469b3d.jpg">
+    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-rabbit.jpg" alt="Fortune Rabbit">
     <div class="bar-container">
       <div class="bar" style="width: 96.75%; background-color: hsl(120, 100%, 38%)"></div>
     </div>
@@ -79,7 +102,7 @@
 
   <div class="game">
     <h2>🐉 Fortune Dragon - RTP: 96.53%</h2>
-    <img src="https://www.pgsoft.com/uploads/Games/Images/60259a6f-6644-4f19-b059-352a967b1ad1.jpg">
+    <img src="https://www.pgsoft-slots.org/wp-content/uploads/2023/05/fortune-dragon.jpg" alt="Fortune Dragon">
     <div class="bar-container">
       <div class="bar" style="width: 96.53%; background-color: hsl(120, 100%, 35%)"></div>
     </div>
